@@ -18,73 +18,55 @@ function Sleep(ms){
 
 async function FlipTimes(spinAmount){
     for (let i = 0; i < spinAmount; i++) {
-        console.log(i);
-        rty();
-        await Sleep(coinSpinDuration.duration);
-        
+        AnimateCoin();
+        await Sleep(COINSPINDURATION.duration);
     }
 }
 
-const coinSpin = [
+const COINSPIN = [
     { transform: "rotateY(180deg)" }
 ];
 
-const coinSpinDuration = {
+const COINSPINDURATION = {
     duration: 2000,
     iterations: 1
 };
 
-async function rty() {
-    coinImage.animate(coinSpin, coinSpinDuration);
+async function AnimateCoin() {
+    coinImage.animate(COINSPIN, COINSPINDURATION);
 
     setTimeout(() => {
-        qwe();
-    }, coinSpinDuration.duration / 2);
+        UpdateCoinFace();
+    }, COINSPINDURATION.duration / 2);
 }
 
-
-
-function qwe() {
-    let random = Math.floor(Math.random() * 2);
-    console.log(random);
-    
-    if(spinAmount === 5)
-    {
-        console.log("Ran loop again!");
-    }
-
+function UpdateCoinFace() {
+    spinCounter++;
     if(isHead)
     {
-        spinCounter++;
         coinImage.src = "/images/coinTail.jpg";
     }
     else
     {
-        spinCounter++;
         coinImage.src = "/images/coinFace.jpg";
         
     }
 
-    isHead = !isHead;
+    CoinRandomiser();
 
-    
+    isHead = !isHead;
+}
+
+function CoinRandomiser(){
+
+    let random = Math.floor(Math.random() * 2);
+    console.log(random);
 
     if(spinCounter === spinAmount)
     {
-        console.log(`SpinCOUNT:${spinCounter}`);
-        if(random === 1)
-        {
-            coinImage.src = "/images/coinTail.jpg";
-
-        }
-        else
-        {
-            coinImage.src = "/images/coinFace.jpg";
-
-        }
-    // }else if(spinCounter === spinAmount)
-    // {
-    //     console.log(`spincount-after:${spinCounter}`);
+        random === 1 ? coinImage.src="/images/coinTail.jpg" : coinImage.src="/images/coinFace.jpg";
     }
 }
+
+    
 
