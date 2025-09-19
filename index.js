@@ -55,10 +55,10 @@ async function AnimateCoin() {
 function UpdateCoinFace() {
     spinCounter++;
     if (isHead) {
-        coinImage.src = "/images/coinTail.jpg";
+        coinImage.src = "images/coinTail.jpg";
     }
     else {
-        coinImage.src = "/images/coinFace.jpg";
+        coinImage.src = "images/coinFace.jpg";
 
     }
 
@@ -73,7 +73,7 @@ function CoinRandomiser() {
     console.log(random);
 
     if (spinCounter === spinAmount) {
-        random === 1 ? coinImage.src = "/images/coinTail.jpg" : coinImage.src = "/images/coinFace.jpg";
+        random === 1 ? coinImage.src = "images/coinTail.jpg" : coinImage.src = "images/coinFace.jpg";
         random === 1 ? tailCount++ : headCount++;
         random === 1 ? previousFlip = "Tails" : previousFlip = "Heads";
         HEAD_COUNT_TEXT.textContent = headCount;
