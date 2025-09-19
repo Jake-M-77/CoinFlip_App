@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
-    <h1 style="text-align: center;">Coin Flip Game</h1>
+
+    <h1 id="title">Coin Flip Game</h1>
+
+    <div id="scoreBox">
+        <h1 id="boxElements">Total Head Count: <span id="headCount"></span></h1>
+        <h1 id="boxElements">Total Tail Count: <span id="tailCount"></span></h1>
+        <h1 id="boxElements">Previous Flip Result: <span id="previousFlip"></span></h1>
+
+    </div>
 
 
     <img id="coin" src="/images/coinFace.jpg" alt="Coin">
 
+
     <button id="flipBtn">Flip Coin</button>
+
+
 
     <script src="index.js"></script>
 </body>
+
 </html>
