@@ -1,0 +1,30 @@
+#coin{
+    width: 400px;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    background-color: blue;
+}
+
+
+#flipBtn{
+    width: 200px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: hsla(196, 100%, 50%, 0.9);
+    color: white;
+    cursor: pointer;
+}
+
+#flipBtn:hover{
+    background-color: hsla(196, 100%, 50%, 0.8);
+
+}
+#flipBtn:active{
+    background-color: hsla(196, 100%, 50%, 0.5);
+
+}
